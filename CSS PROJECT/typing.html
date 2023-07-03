@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+        body{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url(background.jpg);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .all{
+            display: inline-flex;
+        }
+      .typeanime{
+            font-size: 60px;
+            font-weight: 400;
+            margin-right: 15px;
+        }
+        .list{
+            list-style: none;
+        }
+        .list li .red{
+            list-style: none;
+            font-size: 60px;
+            font-weight: 500;
+            color: #FC6D6D;
+            position: relative;
+       
+            
+        }
+        .list li .red::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-left: 2px solid #FC6D6D;
+            left: 0;
+            background-image: url(jm.png);
+            background-size: 0;
+            animation: typing 3.0s steps(16) infinite;
+        }
+        @keyframes typing{
+            100%{
+                left: 100%;
+                margin: 0 -35px 0 35px;
+            }
+            
+        }
+        .typeanime{
+            display: inline-block;
+        }
+        .list{
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+    <div class="typing">
+        <div class="typeanime">
+            Hi, Im
+        </div>
+        <ul class="list">
+            <li><span class="red">a ICT STUDENT</span></li>
+            <li><span class="red">a NOBBY PROGRAMMER</span></li>
+            <li><span class="red">a FUTURE WEB DEVELOPER</spa></li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>
